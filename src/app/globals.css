@@ -6,30 +6,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-@theme {
-  --font-serif: "Lora", serif;
-  --font-sans: "Montserrat", sans-serif;
-}
-
-@font-face {
-  font-family: "Lora";
-  src: url("/fonts/Lora-VariableFont_wght.woff2") format("woff2");
-  /* Assicurati che il nome file sia identico */
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  /* Mostra un font di sistema finché questo non è carico */
-}
-
-/* Definiamo il font Sans (Montserrat) */
-@font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);

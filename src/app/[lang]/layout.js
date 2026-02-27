@@ -2,6 +2,21 @@ import "../globals.css";
 import JsonLd from "@/components/JsonLd";
 import ClientLayout from "@/components/ClientLayout";
 import { getSunsetTime } from "@/lib/sunset";
+import { Lora, Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-sans",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-serif",
+});
 
 export async function generateStaticParams() {
   return [{ lang: "it" }, { lang: "en" }, { lang: "es" }, { lang: "de" }];
@@ -37,7 +52,7 @@ export default async function RootLayout({ children, params }) {
   const sunsetTime = await getSunsetTime();
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className={`${montserrat.variable} ${lora.variable}`}>
       <body className="min-h-screen bg-stone-50 font-sans text-stone-900">
         <JsonLd />
         <ClientLayout initialLang={lang} initialSunset={sunsetTime}>

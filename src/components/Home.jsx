@@ -55,6 +55,7 @@ const Home = () => {
             alt="Logo Al Posto Giusto"
             width={364}
             height={150}
+            priority
             className="py-8 block md:hidden w-auto mx-auto"
           />
           <Image
@@ -62,6 +63,7 @@ const Home = () => {
             alt="Logo Al Posto Giusto"
             width={1200}
             height={266}
+            priority
             className="py-8 hidden md:block"
           />
 
@@ -136,7 +138,6 @@ const Home = () => {
           <div className="relative">
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-amber-50 rounded-full blur-3xl opacity-50 -z-10" />
             <div className="grid grid-cols-2 gap-4">
-              {/* Mobile images */}
               <div className="relative rounded-2xl shadow-lg mt-12 overflow-hidden aspect-[4/5] block md:hidden hover:scale-105 transition-transform duration-500">
                 <Image
                   src="/media/feature-2-sm.webp"
@@ -145,7 +146,7 @@ const Home = () => {
                   className="object-cover"
                 />
               </div>
-              {/* Desktop images */}
+
               <div className="relative rounded-2xl shadow-lg mt-12 overflow-hidden aspect-[4/5] hidden md:block hover:scale-105 transition-transform duration-500">
                 <Image
                   src="/media/feature-2-md.webp"
