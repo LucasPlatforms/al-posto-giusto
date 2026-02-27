@@ -6,36 +6,11 @@ import { Sun, Menu, X, Globe, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 const Navbar = () => {
-  const { lang, handleLangChange } = useApp();
+  const { lang, handleLangChange, sunsetTime } = useApp();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sunsetTime, setSunsetTime] = useState("--:--");
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const langDropdownRef = useRef(null);
   const mobileMenuRef = useRef(null);
-
-  useEffect(() => {
-    const lat = 38.9784;
-    const lng = 1.432;
-
-    const fetchSunsetTime = async () => {
-      try {
-        const response = await fetch(
-          `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&formatted=0`,
-        );
-        const data = await response.json();
-        if (data.status === "OK") {
-          const sunsetUtc = new Date(data.results.sunset);
-          const options = { hour: "2-digit", minute: "2-digit", hour12: false };
-          const localTime = sunsetUtc.toLocaleTimeString([], options);
-          setSunsetTime(localTime);
-        }
-      } catch (error) {
-        console.error("Error fetching sunset time:", error);
-        setSunsetTime("19:45");
-      }
-    };
-    fetchSunsetTime();
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {

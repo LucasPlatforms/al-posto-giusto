@@ -148,7 +148,7 @@ const Home = () => {
               {/* Desktop images */}
               <div className="relative rounded-2xl shadow-lg mt-12 overflow-hidden aspect-[4/5] hidden md:block hover:scale-105 transition-transform duration-500">
                 <Image
-                  src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop"
+                  src="/media/feature-2-md.webp"
                   alt="Cocktail Detail"
                   fill
                   className="object-cover"
@@ -165,7 +165,7 @@ const Home = () => {
               </div>
               <div className="relative rounded-2xl shadow-lg overflow-hidden aspect-[4/5] hidden md:block hover:-translate-y-6 transition-transform duration-500">
                 <Image
-                  src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?q=80&w=1000&auto=format&fit=crop"
+                  src="/media/feature-1-md.webp"
                   alt="Bar Vibe"
                   fill
                   className="object-cover"
