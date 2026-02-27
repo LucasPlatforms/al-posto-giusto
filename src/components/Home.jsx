@@ -42,6 +42,8 @@ const Home = () => {
             alt="Al Posto Giusto Hero Background"
             fill
             priority
+            quality={60}
+            sizes="100vw"
             className="object-cover brightness-[0.4]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/70" />
@@ -56,6 +58,7 @@ const Home = () => {
             width={364}
             height={150}
             priority
+            sizes="(max-width: 768px) 364px, 0px"
             className="py-8 block md:hidden w-auto mx-auto"
           />
           <Image
@@ -64,6 +67,7 @@ const Home = () => {
             width={1200}
             height={266}
             priority
+            sizes="(max-width: 768px) 0px, 1200px"
             className="py-8 hidden md:block"
           />
 
