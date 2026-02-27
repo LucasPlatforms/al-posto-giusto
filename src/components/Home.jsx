@@ -56,10 +56,10 @@ const Home = () => {
             src="/media/logo-hero-sm.webp"
             alt="Logo Al Posto Giusto"
             width={364}
-            height={150}
+            height={81}
             priority
-            sizes="(max-width: 768px) 364px, 0px"
-            className="py-8 block md:hidden w-auto mx-auto"
+            sizes="(max-width: 768px) 80vw, 0px"
+            className="py-8 block md:hidden w-full mx-auto"
           />
           <Image
             src="/media/logo-full-md.webp"
