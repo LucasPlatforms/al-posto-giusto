@@ -1,9 +1,11 @@
 export default function JsonLd() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: "Al Posto Giusto",
-    image: "https://www.tuodominio.com/media/hero-img-full.webp",
+    image: `${siteUrl}/media/hero-img-full.webp`,
     description: "Bar e ristorante italiano nel porto di Santa Eulària, Ibiza.",
     address: {
       "@type": "PostalAddress",
@@ -19,7 +21,7 @@ export default function JsonLd() {
       longitude: 1.5335815,
     },
     telephone: "+34600000000",
-    url: "https://www.tuodominio.com",
+    url: siteUrl,
     openingHours: "Mo-Su 08:00-00:00",
     servesCuisine: "Italian",
     priceRange: "€€",

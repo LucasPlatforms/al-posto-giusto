@@ -250,6 +250,14 @@ const Home = () => {
                     <p className="text-stone-500 text-sm">
                       07840 Santa Eulària des Riu, Illes Balears, Spain
                     </p>
+                    <a
+                      href="https://maps.app.goo.gl/vXFdRXYp7EcYWzd26"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-block bg-stone-900 text-white px-8 py-3 mt-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-amber-600 transition-colors "
+                    >
+                      Open in Maps ↗
+                    </a>
                   </div>
                 </div>
 
@@ -258,7 +266,9 @@ const Home = () => {
                     <Phone size={22} />
                   </div>
                   <div>
-                    <p className="font-bold text-lg">+34 600 000 000</p>
+                    <a href={whatsappUrl} className="font-bold text-lg">
+                      +34 600 000 000
+                    </a>
                     <p className="text-stone-500 text-sm">
                       Reservations via WhatsApp
                     </p>
@@ -270,41 +280,29 @@ const Home = () => {
                     <Clock size={22} />
                   </div>
                   <div>
-                    <p className="font-bold text-lg">{content[lang].hours}</p>
+                    <p className="font-bold text-lg opacity-100">
+                      {content[lang].hours}
+                    </p>
                     <p className="text-stone-500 text-sm">Open all season</p>
                   </div>
                 </div>
-              </div>
 
-              <div className="inset-0 flex items-center justify-center">
-                <div className="bg-white px-8 py-6 rounded-3xl shadow-2xl text-center">
-                  <Sun className="text-amber-600 mx-auto mb-2 animate-spin-slow" />
-                  <p className="font-serif italic text-2xl font-bold">
-                    Steps from the Port
-                  </p>
-                  <p className="text-[10px] text-stone-400 uppercase tracking-widest mt-1">
-                    Get Directions
-                  </p>
-                  <a
-                    href="https://maps.app.goo.gl/vXFdRXYp7EcYWzd26"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-block bg-stone-900 text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-amber-600 transition-colors"
-                  >
-                    Open in Maps ↗
-                  </a>
+                <div className="flex gap-5">
+                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-amber-600 shadow-sm shrink-0">
+                    <Instagram size={22} />
+                  </div>
+                  <div className="my-auto">
+                    <a
+                      href="https://www.instagram.com/al_posto_giusto_ibiza/"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Instagram Al Posto Giusto Ibiza"
+                      className="text-amber-600  italic font-bold text-lg"
+                    >
+                      al_posto_giusto_ibiza
+                    </a>
+                  </div>
                 </div>
-              </div>
-
-              <div className="flex gap-4 pt-4">
-                <a
-                  href="https://www.instagram.com/al_posto_giusto_ibiza/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-2xl bg-stone-900 text-white flex items-center justify-center hover:bg-amber-600 transition-all shadow-lg hover:-translate-y-1"
-                >
-                  <Instagram size={22} />
-                </a>
               </div>
             </div>
 
