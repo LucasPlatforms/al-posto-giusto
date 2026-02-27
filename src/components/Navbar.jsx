@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { content, whatsappUrl, menuLanguages } from "@/lib/constants";
+import { useApp } from "@/components/AppProvider";
 import { Sun, Menu, X, Globe, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
