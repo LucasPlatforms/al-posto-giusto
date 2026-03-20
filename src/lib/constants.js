@@ -9,10 +9,39 @@ export const linkGenieUrl = "https://linkgenie.net/lgagsqok";
 export const whatsappUrl = "https://wa.me/34600000000";
 
 export const menuUrl = {
-  en: "https://heyzine.com/flip-book/4402ea28fd.html",
-  it: "https://heyzine.com/flip-book/9c783c392b.html",
-  es: "https://heyzine.com/flip-book/e02cb138c5.html",
-  de: "https://heyzine.com/flip-book/acf259d5f3.html",
+  en: {
+    breakfast: "menu/Al-Posto-Giusto_Menu-Colazione_EN.pdf",
+    drinks: "menu/Al-Posto-Giusto_Cocktails+Bibite_EN.pdf",
+    food: "menu/Al-Posto-Giusto_Menu-Food_EN.pdf",
+  },
+  it: {
+    breakfast: "menu/Al-Posto-Giusto_Menu-Colazione_IT.pdf",
+    drinks: "menu/Al-Posto-Giusto_Cocktails+Bibite_IT.pdf",
+    food: "menu/Al-Posto-Giusto_Menu-Food_IT.pdf",
+  },
+  es: {
+    breakfast: "menu/Al-Posto-Giusto_Menu-Colazione_ES.pdf",
+    drinks: "menu/Al-Posto-Giusto_Cocktails+Bibite_ES.pdf",
+    food: "menu/Al-Posto-Giusto_Menu-Food_ES.pdf",
+  },
+};
+
+export const menuCategories = {
+  en: {
+    breakfast: { title: "Breakfast", desc: "Morning espresso & pastries" },
+    drinks: { title: "Drinks", desc: "Cocktails & fine spirits" },
+    food: { title: "Food", desc: "Tapas & Mediterranean dishes" },
+  },
+  it: {
+    breakfast: { title: "Colazione", desc: "Espresso e colazioni" },
+    drinks: { title: "Beveraggio", desc: "Cocktail e distillati" },
+    food: { title: "Cibo", desc: "Tapas e piatti mediterranei" },
+  },
+  es: {
+    breakfast: { title: "Desayuno", desc: "Espresso y bollería" },
+    drinks: { title: "Bebidas", desc: "Cócteles y licores finos" },
+    food: { title: "Comida", desc: "Tapas y platos mediterráneos" },
+  },
 };
 
 export const imgFlags = {
@@ -37,6 +66,7 @@ export const content = {
       "The ideal place for those looking for an authentic and unforgettable culinary experience. We offer traditional Italian dishes prepared with fresh and high-quality ingredients, accompanied by a selection of fine wines. Our chef creates dishes that tell the story of the territory, while the welcoming and familiar environment will make you feel at home. Whether it's a romantic dinner, a family celebration or an evening with friends, we are ready to offer you a unique gastronomic experience. We are waiting for you to delight you with the flavors of our cuisine!",
     liveVibe: "Current Vibe",
     digitalMenu: "Explore the Menu",
+    chooseLang: "Select language to view menu",
     where: "Visit Us",
     book: "Book a Table",
     menuCta: "Open Menu",
@@ -54,6 +84,7 @@ export const content = {
       "Situato nel cuore del porto di Ibiza, Al Posto Giusto è più di un bar. È un rifugio dove l'ospitalità italiana incontra l'anima delle Baleari. Dall'espresso mattutino all'ultimo cocktail della notte, diamo ritmo ai tuoi ricordi sull'isola.",
     liveVibe: "Vibe Attuale",
     digitalMenu: "Esplora il Menu",
+    chooseLang: "Seleziona la lingua dei menu",
     where: "Dove Siamo",
     book: "Prenota un Tavolo",
     menuCta: "Apri Menu",
@@ -71,6 +102,7 @@ export const content = {
       "Situado en el corazón del puerto de Ibiza, Al Posto Giusto es más que un bar. Es un santuario donde la hospitalidad italiana se encuentra con el alma balear. Desde el café de la mañana fino al último cóctel, ponemos banda sonora a tus recuerdos.",
     liveVibe: "Vibe Actual",
     digitalMenu: "Explora el Menú",
+    chooseLang: "Selecciona el idioma de los menús",
     where: "Visítanos",
     book: "Reservar Mesa",
     menuCta: "Ver Menú",
