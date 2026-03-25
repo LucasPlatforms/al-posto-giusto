@@ -38,9 +38,7 @@ const Navbar = () => {
       ? "Tramonto: "
       : lang === "en"
         ? "Sunset: "
-        : lang === "es"
-          ? "Atardecer: "
-          : "Sonnenuntergang: ";
+        : "Atardecer: ";
 
   return (
     <div>
@@ -120,11 +118,10 @@ const Navbar = () => {
                   <button
                     key={l.id}
                     onClick={() => handleLangChange(l.id)}
-                    className={`text-[9px] font-black w-7 h-7 rounded-full uppercase transition-all duration-300 ${
-                      lang === l.id
+                    className={`text-[9px] font-black w-7 h-7 rounded-full uppercase transition-all duration-300 ${lang === l.id
                         ? "bg-amber-600 text-white shadow-lg"
                         : "text-white/40 hover:text-white hover:bg-white/10"
-                    }`}
+                      }`}
                   >
                     {l.id}
                   </button>
@@ -146,11 +143,10 @@ const Navbar = () => {
 
               {/* Mobile dropdown */}
               <div
-                className={`absolute right-0 mt-3 w-40 bg-stone-900 border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50 lg:hidden transition-all duration-300 ease-in-out ${
-                  langDropdownOpen
+                className={`absolute right-0 mt-3 w-40 bg-stone-900 border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50 lg:hidden transition-all duration-300 ease-in-out ${langDropdownOpen
                     ? "opacity-100 translate-y-0 visible"
                     : "opacity-0 -translate-y-2 invisible"
-                }`}
+                  }`}
               >
                 {menuLanguages.map((l) => (
                   <button
@@ -159,11 +155,10 @@ const Navbar = () => {
                       handleLangChange(l.id);
                       setLangDropdownOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between px-4 py-3 text-sm font-bold border-b border-white/5 last:border-0 transition-colors ${
-                      lang === l.id
+                    className={`w-full flex items-center justify-between px-4 py-3 text-sm font-bold border-b border-white/5 last:border-0 transition-colors ${lang === l.id
                         ? "bg-amber-600 text-white"
                         : "text-white/70 hover:bg-white/5"
-                    }`}
+                      }`}
                   >
                     <span>{l.label}</span>
                     <span className="text-lg">{l.flag}</span>
@@ -177,11 +172,10 @@ const Navbar = () => {
         {/* Mobile menu */}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out bg-stone-950/95 backdrop-blur-xl rounded-3xl border border-white/5 shadow-2xl mt-3 ${
-            mobileMenuOpen
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out bg-stone-950/95 backdrop-blur-xl rounded-3xl border border-white/5 shadow-2xl mt-3 ${mobileMenuOpen
               ? "max-h-96 opacity-100 translate-y-0"
               : "max-h-0 opacity-0 -translate-y-4 pointer-events-none"
-          }`}
+            }`}
         >
           <nav className="flex flex-col gap-8 text-center text-white font-black uppercase tracking-[0.3em] text-sm p-8">
             <a

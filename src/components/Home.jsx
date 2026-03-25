@@ -118,7 +118,11 @@ const Home = () => {
             <span className="text-amber-600 font-bold uppercase tracking-widest flex items-center gap-2 text-sm">
               <Waves size={16} /> Welcome to "Al Posto Giusto"
             </span>
-            <h2 className="text-4xl md:text-6xl font-serif italic leading-tight">
+
+
+
+
+            <h2 className={`text-5xl md:text-7xl font-serif italic font-bold transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}>
               {content[lang].storyTitle}
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed font-light">
@@ -207,7 +211,12 @@ const Home = () => {
                 onClick={() => handleLangChange(l.id)}
                 className={`flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 rounded-full transition-all duration-300 border-2 ${lang === l.id ? "bg-stone-900 text-white border-stone-900 shadow-2xl scale-105" : `bg-white text-stone-500 border-stone-100 hover:bg-stone-50 ${hoverBorderColors[l.id]}`}`}
               >
-                <span className="text-2xl sm:text-3xl">{l.flag}</span>
+                <Image
+                  src={`/${imgFlags[l.id]}`}
+                  alt={l.label}
+                  width={24}
+                  height={24}
+                />
                 <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em]">
                   {l.label}
                 </span>
@@ -224,24 +233,22 @@ const Home = () => {
               target="_blank"
               className={`group relative bg-white border-2 border-stone-100 p-10 rounded-[3rem] text-center ${hoverBorderColors[lang]} transition-all duration-500 overflow-hidden text-stone-900 flex flex-col items-center justify-center`}
             >
-              <div className="w-20 h-20 bg-stone-50 rounded-full flex items-center justify-center text-stone-600 mb-6 group-hover:scale-110 transition-transform duration-500 relative z-10">
-                <Coffee size={32} />
-              </div>
+
               <h4 className="text-3xl font-serif italic font-bold mb-3 relative z-10">
                 {menuCategories[lang].breakfast.title}
               </h4>
               <p className="text-stone-500 text-sm mb-8 relative z-10">
                 {menuCategories[lang].breakfast.desc}
               </p>
-              <div className="mt-auto inline-flex items-center gap-2 text-stone-400 font-black text-[9px] uppercase tracking-widest transition-colors relative z-10">
+              <div className="mt-auto inline-flex items-center gap-2 text-stone-500 font-black text-[12px] uppercase tracking-widest transition-colors relative z-10">
                 {content[lang].menuCta}{" "}
                 <ChevronRight
                   size={14}
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 opacity-[0.02] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
-                <Coffee size={150} />
+              <div className="absolute -bottom-4 -right-4 opacity-[0.07] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
+                <Coffee size={130} />
               </div>
             </a>
 
@@ -251,9 +258,6 @@ const Home = () => {
               target="_blank"
               className={`group relative bg-white border-2 border-stone-100 p-10 rounded-[3rem] text-center ${hoverBorderColors[lang]} transition-all duration-500 overflow-hidden text-stone-900 flex flex-col items-center justify-center`}
             >
-              <div className="w-20 h-20 bg-stone-50 rounded-full flex items-center justify-center text-stone-600 mb-6 group-hover:scale-110 transition-transform duration-500 relative z-10">
-                <GlassWater size={32} />
-              </div>
               <h4 className="text-3xl font-serif italic font-bold mb-3 relative z-10">
                 {menuCategories[lang].drinks.title}
               </h4>
@@ -267,8 +271,8 @@ const Home = () => {
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 opacity-[0.02] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
-                <GlassWater size={150} />
+              <div className="absolute -bottom-4 -right-4 opacity-[0.07] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
+                <GlassWater size={130} />
               </div>
             </a>
 
@@ -278,9 +282,6 @@ const Home = () => {
               target="_blank"
               className={`group relative bg-white border-2 border-stone-100 p-10 rounded-[3rem] text-center ${hoverBorderColors[lang]} transition-all duration-500 overflow-hidden text-stone-900 flex flex-col items-center justify-center`}
             >
-              <div className="w-20 h-20 bg-stone-50 rounded-full flex items-center justify-center text-stone-600 mb-6 group-hover:scale-110 transition-transform duration-500 relative z-10">
-                <Utensils size={32} />
-              </div>
               <h4 className="text-3xl font-serif italic font-bold mb-3 relative z-10">
                 {menuCategories[lang].food.title}
               </h4>
@@ -294,54 +295,15 @@ const Home = () => {
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 opacity-[0.02] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
-                <Utensils size={150} />
+              <div className="absolute -bottom-4 -right-4 opacity-[0.07] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
+                <Utensils size={130} />
               </div>
             </a>
           </div>
         </div>
       </section>
 
-      {/* Digital Menu Links */}
-      <section id="menu-old" className="py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2
-              className={`text-4xl md:text-5xl font-serif italic transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}
-            >
-              {content[lang].digitalMenu}
-            </h2>
-            <div className="w-16 h-1 bg-amber-600 mx-auto mt-6" />
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {menuLanguages.map((ml) => (
-              <a
-                key={ml.id}
-                href={menuUrl[ml.id]}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative bg-white border border-stone-200 p-8 rounded-3xl text-center hover:border-amber-600 hover:shadow-2xl transition-all duration-500 overflow-hidden"
-              >
-                <Image
-                  src={`/${imgFlags[ml.id]}`}
-                  alt={ml.label}
-                  width={48}
-                  height={48}
-                  className="mx-auto mb-4"
-                />
-                <h4 className="text-xl font-bold mb-4">{ml.label}</h4>
-                <div className="inline-flex items-center gap-2 text-stone-400 group-hover:text-amber-600 font-bold text-xs uppercase tracking-widest transition-colors">
-                  {content[lang].menuCta} <ChevronRight size={14} />
-                </div>
-                <div className="absolute -bottom-6 -right-6 opacity-[0.02] group-hover:opacity-[0.06] transition-opacity rotate-12">
-                  <FileText size={150} />
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Location Section */}
       <section
@@ -351,8 +313,11 @@ const Home = () => {
         <div className="relative max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-4 space-y-10">
+
+
+
               <h2
-                className={`text-4xl font-serif italic transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}
+                className={`text-5xl md:text-7xl font-serif italic font-bold transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}
               >
                 {content[lang].where}
               </h2>

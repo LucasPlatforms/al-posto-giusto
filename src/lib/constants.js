@@ -2,7 +2,6 @@ export const menuLanguages = [
   { id: "en", label: "English", flag: "🇬🇧" },
   { id: "it", label: "Italiano", flag: "🇮🇹" },
   { id: "es", label: "Español", flag: "🇪🇸" },
-  { id: "de", label: "Deutsch", flag: "🇩🇪" },
 ];
 
 export const linkGenieUrl = "https://linkgenie.net/lgagsqok";
@@ -28,7 +27,7 @@ export const menuUrl = {
 
 export const menuCategories = {
   en: {
-    breakfast: { title: "Breakfast", desc: "Morning espresso & pastries" },
+    breakfast: { title: "Breakfast", desc: "From 8.00 to  13.00" },
     drinks: { title: "Drinks", desc: "Cocktails & fine spirits" },
     food: { title: "Food", desc: "Tapas & Mediterranean dishes" },
   },
