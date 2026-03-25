@@ -19,7 +19,7 @@ const lora = Lora({
 });
 
 export async function generateStaticParams() {
-  return [{ lang: "it" }, { lang: "en" }, { lang: "es" }, { lang: "de" }];
+  return [{ lang: "it" }, { lang: "en" }, { lang: "es" }];
 }
 
 export async function generateMetadata({ params }) {
@@ -28,7 +28,6 @@ export async function generateMetadata({ params }) {
     it: "Al Posto Giusto Ibiza",
     en: "Al Posto Giusto Ibiza",
     es: "Al Posto Giusto Ibiza",
-    de: "Al Posto Giusto Ibiza",
   };
   return {
     metadataBase: new URL(
@@ -41,7 +40,6 @@ export async function generateMetadata({ params }) {
         it: "/it",
         en: "/en",
         es: "/es",
-        de: "/de",
       },
     },
   };
