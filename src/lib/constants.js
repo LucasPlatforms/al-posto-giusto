@@ -9,9 +9,9 @@ export const whatsappUrl = "https://wa.me/34600000000";
 
 export const menuUrl = {
   en: {
-    breakfast: "menu/Al-Posto-Giusto_Menu-Colazione_EN.pdf",
-    drinks: "menu/Al-Posto-Giusto_Cocktails+Bibite_EN.pdf",
-    food: "menu/Al-Posto-Giusto_Menu-Food_EN.pdf",
+    breakfast: "/menu/Al-Posto-Giusto_Menu-Colazione_EN.pdf",
+    drinks: "/menu/Al-Posto-Giusto_Cocktails+Bibite_EN.pdf",
+    food: "/menu/Al-Posto-Giusto_Menu-Food_EN.pdf",
   },
   it: {
     breakfast: "menu/Al-Posto-Giusto_Menu-Colazione_IT.pdf",
@@ -28,18 +28,18 @@ export const menuUrl = {
 export const menuCategories = {
   en: {
     breakfast: { title: "Breakfast", desc: "From 8.00 to  13.00" },
-    drinks: { title: "Drinks", desc: "Cocktails & fine spirits" },
-    food: { title: "Food", desc: "Tapas & Mediterranean dishes" },
+    drinks: { title: "Drinks", desc: "Cocktails, Wines, Beers, Sangria" },
+    food: { title: "Food", desc: "Mediterranean dishes" },
   },
   it: {
-    breakfast: { title: "Colazione", desc: "Espresso e colazioni" },
-    drinks: { title: "Beveraggio", desc: "Cocktail e distillati" },
-    food: { title: "Cibo", desc: "Tapas e piatti mediterranei" },
+    breakfast: { title: "Colazione", desc: "Dalle ore 8.00 alle 13.00" },
+    drinks: { title: "Beveraggio", desc: "Cocktail, Vini, Birre, Sangria" },
+    food: { title: "Cibo", desc: "Piatti mediterranei" },
   },
   es: {
-    breakfast: { title: "Desayuno", desc: "Espresso y bollería" },
-    drinks: { title: "Bebidas", desc: "Cócteles y licores finos" },
-    food: { title: "Comida", desc: "Tapas y platos mediterráneos" },
+    breakfast: { title: "Desayuno", desc: "De 8.00 a 13.00" },
+    drinks: { title: "Bebidas", desc: "Cócteles, Vinos, Cervezas, Sangria" },
+    food: { title: "Comida", desc: "Platos mediterráneos" },
   },
 };
 
@@ -65,7 +65,6 @@ export const content = {
       "The ideal place for those looking for an authentic and unforgettable culinary experience. We offer traditional Italian dishes prepared with fresh and high-quality ingredients, accompanied by a selection of fine wines. Our chef creates dishes that tell the story of the territory, while the welcoming and familiar environment will make you feel at home. Whether it's a romantic dinner, a family celebration or an evening with friends, we are ready to offer you a unique gastronomic experience. We are waiting for you to delight you with the flavors of our cuisine!",
     liveVibe: "Current Vibe",
     digitalMenu: "Explore the Menu",
-    chooseLang: "Select language to view menu",
     where: "Visit Us",
     book: "Book a Table",
     menuCta: "Open Menu",
@@ -80,10 +79,9 @@ export const content = {
     motto: "Il momento esatto, il posto perfetto.",
     storyTitle: "Chi Siamo",
     storyText:
-      "Situato nel cuore del porto di Ibiza, Al Posto Giusto è più di un bar. È un rifugio dove l'ospitalità italiana incontra l'anima delle Baleari. Dall'espresso mattutino all'ultimo cocktail della notte, diamo ritmo ai tuoi ricordi sull'isola.",
+      "Il luogo ideale per chi cerca un'esperienza culinaria autentica e indimenticabile. Offriamo piatti della tradizione italiana preparati con ingredienti freschi e di alta qualità, accompagnati da una selezione di vini pregiati. Il nostro chef crea portate che raccontano la storia del territorio, mentre l'ambiente accogliente e familiare vi farà sentire come a casa. Che si tratti di una cena romantica, una celebrazione in famiglia o una serata tra amici, siamo pronti a offrirvi un'esperienza gastronomica unica. Vi aspettiamo per deliziarvi con i sapori della nostra cucina!",
     liveVibe: "Vibe Attuale",
     digitalMenu: "Esplora il Menu",
-    chooseLang: "Seleziona la lingua dei menu",
     where: "Dove Siamo",
     book: "Prenota un Tavolo",
     menuCta: "Apri Menu",
@@ -96,12 +94,11 @@ export const content = {
   },
   es: {
     motto: "El momento exacto, el lugar perfecto.",
-    storyTitle: "Nuestra Esencia",
+    storyTitle: "Quiénes somos",
     storyText:
-      "Situado en el corazón del puerto de Ibiza, Al Posto Giusto es más que un bar. Es un santuario donde la hospitalidad italiana se encuentra con el alma balear. Desde el café de la mañana fino al último cóctel, ponemos banda sonora a tus recuerdos.",
+      "El lugar ideal para quienes buscan una experiencia culinaria auténtica e inolvidable. Ofrecemos platos tradicionales italianos preparados con ingredientes frescos y de alta calidad, acompañados por una selección de vinos selectos. Nuestro chef crea platos que cuentan la historia del territorio, mientras que el ambiente acogedor y familiar le hará sentir como en casa. Ya sea una cena romántica, una celebración familiar o una noche con amigos, estamos listos para ofrecerle una experiencia gastronómica única. ¡Le esperamos para deleitarle con los sabores de nuestra cocina!",
     liveVibe: "Vibe Actual",
     digitalMenu: "Explora el Menú",
-    chooseLang: "Selecciona el idioma de los menús",
     where: "Visítanos",
     book: "Reservar Mesa",
     menuCta: "Ver Menú",

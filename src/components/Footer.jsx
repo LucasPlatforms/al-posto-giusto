@@ -7,15 +7,15 @@ const Footer = () => {
         <Image
           src="/media/logo-footer-sm.webp"
           alt="Footer Logo"
-          width={120}
+          width={217}
           height={48}
           className="h-12 w-auto mx-auto mb-8 opacity-90 block md:hidden"
         />
         <Image
           src="/media/logo-full-min.webp"
           alt="Footer Logo"
-          width={400}
-          height={48}
+          width={600}
+          height={133}
           className="h-12 w-auto mx-auto mb-8 opacity-90 hidden md:block"
         />
         <div className="h-px bg-white/10 w-full mb-8" />

@@ -24,6 +24,6 @@ export function middleware(request) {
 export const config = {
   // Evita che il middleware agisca su file statici e immagini
   matcher: [
-    "/((?!api|_next/static|_next/image|media|fonts|favicon.ico|robots.txt).*)",
+    "/((?!api|_next/static|_next/image|media|fonts|favicon.ico|robots.txt|.*\\..*).*)",
   ],
 };

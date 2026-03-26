@@ -40,14 +40,14 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-stone-900 selection:bg-amber-100">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+      <section className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+        <div className="w-full absolute inset-0 z-0">
           <Image
             src="/media/hero-img-full.webp"
             alt="Al Posto Giusto Hero Background"
             fill
             priority
-            quality={60}
+            quality={75}
             sizes="100vw"
             className="object-cover brightness-[0.4]"
           />
@@ -55,7 +55,7 @@ const Home = () => {
         </div>
 
         <div
-          className={`relative z-10 px-6 transition-all duration-500 ${isChanging ? "opacity-0 scale-95 blur-md" : "opacity-100 scale-100 blur-0"}`}
+          className={`w-full sm:w-auto relative z-10 px-6 transition-all duration-500 ${isChanging ? "opacity-0 scale-95 blur-md" : "opacity-100 scale-100 blur-0"}`}
         >
           <Image
             src="/media/logo-hero-sm.webp"
@@ -64,7 +64,7 @@ const Home = () => {
             height={81}
             priority
             sizes="(max-width: 768px) 80vw, 0px"
-            className="py-8 block md:hidden w-full mx-auto"
+            className="py-8 block md:hidden w-full mx-auto h-auto"
           />
           <Image
             src="/media/logo-full-md.webp"
@@ -73,25 +73,24 @@ const Home = () => {
             height={266}
             priority
             sizes="(max-width: 768px) 0px, 1200px"
-            className="py-8 hidden md:block"
+            className="py-8 hidden md:block w-full h-auto"
           />
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
               href="#menu"
-              className="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white px-12 py-5 rounded-full font-bold shadow-2xl transition-all hover:translate-y-1 text-center"
+              className="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white px-12 py-5 rounded-full text-sm font-bold uppercase shadow-2xl transition-all hover:translate-y-1 text-center"
             >
               {content[lang].digitalMenu}
             </a>
             <a
               href={whatsappUrl}
-              className="w-full sm:w-auto bg-white/10 hover:backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-full font-bold shadow-2xl transition-all hover:translate-y-1 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto bg-white/10 hover:backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-full text-sm font-bold uppercase shadow-2xl transition-all hover:translate-y-1 flex items-center justify-center gap-2"
             >
               <MessageCircle size={18} /> {content[lang].book}
             </a>
           </div>
         </div>
-
         {/* Status Badge */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 sm:left-12 sm:translate-x-0 flex items-center gap-4 bg-white/95 backdrop-blur px-6 py-4 rounded-full shadow-2xl border border-stone-100 z-20 group cursor-default">
           <div className="relative">
@@ -119,10 +118,9 @@ const Home = () => {
               <Waves size={16} /> Welcome to "Al Posto Giusto"
             </span>
 
-
-
-
-            <h2 className={`text-5xl md:text-7xl font-serif italic font-bold transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}>
+            <h2
+              className={`text-5xl md:text-6xl font-serif italic font-bold transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}
+            >
               {content[lang].storyTitle}
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed font-light">
@@ -156,6 +154,7 @@ const Home = () => {
                   src="/media/feature-2-sm.webp"
                   alt="Cocktail Detail"
                   fill
+                  sizes="(max-width: 768px) 50vw, 0px"
                   className="object-cover"
                 />
               </div>
@@ -165,6 +164,7 @@ const Home = () => {
                   src="/media/feature-2-md.webp"
                   alt="Cocktail Detail"
                   fill
+                  sizes="(max-width: 768px) 50vw, 0px"
                   className="object-cover"
                 />
               </div>
@@ -174,6 +174,7 @@ const Home = () => {
                   src="/media/feature-1-sm.webp"
                   alt="Bar Vibe"
                   fill
+                  sizes="(max-width: 768px) 50vw, 0px"
                   className="object-cover"
                 />
               </div>
@@ -182,6 +183,7 @@ const Home = () => {
                   src="/media/feature-1-md.webp"
                   alt="Bar Vibe"
                   fill
+                  sizes="(max-width: 768px) 50vw, 0px"
                   className="object-cover"
                 />
               </div>
@@ -190,21 +192,18 @@ const Home = () => {
         </div>
       </section>
       {/*SEZIONE MENU NUOVA*/}
-      <section id="menu" className="py-32 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 space-y-4">
+      <section id="menu" className="py-24 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className=" mb-12 space-y-4">
             <h2
-              className={`text-5xl md:text-7xl font-serif italic font-bold transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}
+              className={`text-5xl md:text-6xl font-serif italic font-bold transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}
             >
               {content[lang].digitalMenu}
             </h2>
-            <p className="text-stone-400 tracking-[0.4em] uppercase text-[9px] font-black">
-              {content[lang].chooseLang}
-            </p>
           </div>
 
           {/* Switcher lingua rapido appositamente per i Menu (Perfetto per Mobile) */}
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-16">
+          <div className="flex flex-wrap  gap-3 sm:gap-6 mb-16">
             {menuLanguages.map((l) => (
               <button
                 key={`menu-lang-${l.id}`}
@@ -233,11 +232,10 @@ const Home = () => {
               target="_blank"
               className={`group relative bg-white border-2 border-stone-100 p-10 rounded-[3rem] text-center ${hoverBorderColors[lang]} transition-all duration-500 overflow-hidden text-stone-900 flex flex-col items-center justify-center`}
             >
-
-              <h4 className="text-3xl font-serif italic font-bold mb-3 relative z-10">
+              <h4 className="text-3xl font-serif italic font-bold mb-2 relative z-10">
                 {menuCategories[lang].breakfast.title}
               </h4>
-              <p className="text-stone-500 text-sm mb-8 relative z-10">
+              <p className="text-stone-500 text-sm mb-4 relative z-10">
                 {menuCategories[lang].breakfast.desc}
               </p>
               <div className="mt-auto inline-flex items-center gap-2 text-stone-500 font-black text-[12px] uppercase tracking-widest transition-colors relative z-10">
@@ -247,7 +245,7 @@ const Home = () => {
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 opacity-[0.07] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
+              <div className="absolute -bottom-4 -right-4 opacity-[0.3] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none text-amber-600">
                 <Coffee size={130} />
               </div>
             </a>
@@ -258,20 +256,20 @@ const Home = () => {
               target="_blank"
               className={`group relative bg-white border-2 border-stone-100 p-10 rounded-[3rem] text-center ${hoverBorderColors[lang]} transition-all duration-500 overflow-hidden text-stone-900 flex flex-col items-center justify-center`}
             >
-              <h4 className="text-3xl font-serif italic font-bold mb-3 relative z-10">
+              <h4 className="text-3xl font-serif italic font-bold mb-2 relative z-10">
                 {menuCategories[lang].drinks.title}
               </h4>
-              <p className="text-stone-500 text-sm mb-8 relative z-10">
+              <p className="text-stone-500 text-sm mb-4 relative z-10">
                 {menuCategories[lang].drinks.desc}
               </p>
-              <div className="mt-auto inline-flex items-center gap-2 text-stone-400 font-black text-[9px] uppercase tracking-widest transition-colors relative z-10">
+              <div className="mt-auto inline-flex items-center gap-2 text-stone-500 font-black text-[12px] uppercase tracking-widest transition-colors relative z-10">
                 {content[lang].menuCta}{" "}
                 <ChevronRight
                   size={14}
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 opacity-[0.07] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
+              <div className="absolute -bottom-4 -right-4 opacity-[0.3] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none text-amber-600">
                 <GlassWater size={130} />
               </div>
             </a>
@@ -282,28 +280,26 @@ const Home = () => {
               target="_blank"
               className={`group relative bg-white border-2 border-stone-100 p-10 rounded-[3rem] text-center ${hoverBorderColors[lang]} transition-all duration-500 overflow-hidden text-stone-900 flex flex-col items-center justify-center`}
             >
-              <h4 className="text-3xl font-serif italic font-bold mb-3 relative z-10">
+              <h4 className="text-3xl font-serif italic font-bold mb-2 relative z-10">
                 {menuCategories[lang].food.title}
               </h4>
-              <p className="text-stone-500 text-sm mb-8 relative z-10">
+              <p className="text-stone-500 text-sm mb-4 relative z-10">
                 {menuCategories[lang].food.desc}
               </p>
-              <div className="mt-auto inline-flex items-center gap-2 text-stone-400 font-black text-[9px] uppercase tracking-widest transition-colors relative z-10">
+              <div className="mt-auto inline-flex items-center gap-2 text-stone-500 font-black text-[12px] uppercase tracking-widest transition-colors relative z-10">
                 {content[lang].menuCta}{" "}
                 <ChevronRight
                   size={14}
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 opacity-[0.07] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none">
+              <div className="absolute -bottom-4 -right-4 opacity-[0.3] group-hover:opacity-[0.06] transition-opacity rotate-12 pointer-events-none text-amber-600">
                 <Utensils size={130} />
               </div>
             </a>
           </div>
         </div>
       </section>
-
-
 
       {/* Location Section */}
       <section
@@ -313,11 +309,8 @@ const Home = () => {
         <div className="relative max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-4 space-y-10">
-
-
-
               <h2
-                className={`text-5xl md:text-7xl font-serif italic font-bold transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}
+                className={`text-5xl md:text-6xl font-serif italic font-bold transition-opacity duration-300 ${isChanging ? "opacity-0" : "opacity-100"}`}
               >
                 {content[lang].where}
               </h2>
