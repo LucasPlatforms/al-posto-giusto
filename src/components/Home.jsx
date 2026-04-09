@@ -58,11 +58,12 @@ const Home = () => {
           className={`w-full sm:w-auto relative z-10 px-6 transition-all duration-500 ${isChanging ? "opacity-0 scale-95 blur-md" : "opacity-100 scale-100 blur-0"}`}
         >
           <Image
-            src="/media/logo-hero-sm.webp"
+            src="/media/logo-full-md.webp"
             alt="Logo Al Posto Giusto"
             width={364}
             height={81}
             priority
+            fetchPriority="high"
             sizes="(max-width: 768px) 80vw, 0px"
             className="py-8 block md:hidden w-full mx-auto h-auto"
           />
@@ -151,7 +152,7 @@ const Home = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative rounded-2xl shadow-lg mt-12 overflow-hidden aspect-[4/5] block md:hidden hover:scale-105 transition-transform duration-500">
                 <Image
-                  src="/media/feature-2-sm.webp"
+                  src="/media/feature-3-md.webp"
                   alt="Cocktail Detail"
                   fill
                   sizes="(max-width: 768px) 50vw, 0px"
@@ -161,7 +162,7 @@ const Home = () => {
 
               <div className="relative rounded-2xl shadow-lg mt-12 overflow-hidden aspect-[4/5] hidden md:block hover:scale-105 transition-transform duration-500">
                 <Image
-                  src="/media/feature-2-md.webp"
+                  src="/media/feature-3-md.webp"
                   alt="Cocktail Detail"
                   fill
                   sizes="(max-width: 768px) 50vw, 0px"
@@ -171,7 +172,7 @@ const Home = () => {
 
               <div className="relative rounded-2xl shadow-lg overflow-hidden aspect-[4/5] block md:hidden hover:-translate-y-6 transition-transform duration-500">
                 <Image
-                  src="/media/feature-1-sm.webp"
+                  src="/media/feature-1-md.webp"
                   alt="Bar Vibe"
                   fill
                   sizes="(max-width: 768px) 50vw, 0px"

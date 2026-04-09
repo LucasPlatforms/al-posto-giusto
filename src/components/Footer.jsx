@@ -5,17 +5,17 @@ const Footer = () => {
     <footer className="py-12 bg-stone-900 text-white/90 text-center">
       <div className="max-w-6xl mx-auto px-6">
         <Image
-          src="/media/logo-footer-sm.webp"
+          src="/media/logo-full-md.webp"
           alt="Footer Logo"
-          width={217}
-          height={48}
+          width={1200}
+          height={266}
           className="h-12 w-auto mx-auto mb-8 opacity-90 block md:hidden"
         />
         <Image
-          src="/media/logo-full-min.webp"
+          src="/media/logo-full-md.webp"
           alt="Footer Logo"
-          width={600}
-          height={133}
+          width={1200}
+          height={266}
           className="h-12 w-auto mx-auto mb-8 opacity-90 hidden md:block"
         />
         <div className="h-px bg-white/10 w-full mb-8" />

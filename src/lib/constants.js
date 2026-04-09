@@ -78,8 +78,21 @@ export const content = {
   it: {
     motto: "Il momento esatto, il posto perfetto.",
     storyTitle: "Chi Siamo",
-    storyText:
-      "Il luogo ideale per chi cerca un'esperienza culinaria autentica e indimenticabile. Offriamo piatti della tradizione italiana preparati con ingredienti freschi e di alta qualità, accompagnati da una selezione di vini pregiati. Il nostro chef crea portate che raccontano la storia del territorio, mentre l'ambiente accogliente e familiare vi farà sentire come a casa. Che si tratti di una cena romantica, una celebrazione in famiglia o una serata tra amici, siamo pronti a offrirvi un'esperienza gastronomica unica. Vi aspettiamo per deliziarvi con i sapori della nostra cucina!",
+    storyText: (
+      <>
+        Il luogo ideale per chi cerca un'esperienza culinaria autentica e
+        indimenticabile. <br />
+        Offriamo piatti della tradizione italiana preparati con ingredienti
+        freschi e di alta qualità, accompagnati da una selezione di vini
+        pregiati. <br />
+        Il nostro chef crea portate che raccontano la storia del territorio,
+        mentre l'ambiente accogliente e familiare vi farà sentire come a casa.
+        <br /> Che si tratti di una cena romantica, una celebrazione in famiglia
+        o una serata tra amici, siamo pronti a offrirvi un'esperienza
+        gastronomica unica. Vi aspettiamo per deliziarvi con i sapori della
+        nostra cucina!
+      </>
+    ),
     liveVibe: "Vibe Attuale",
     digitalMenu: "Esplora il Menu",
     where: "Dove Siamo",
